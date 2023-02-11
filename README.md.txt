@@ -1,1 +1,0 @@
-This project is a simple custom made prompt that can be used to trigger confirmations from users. 
