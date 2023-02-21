@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/demo.css">
+    <script src="../js/main.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <title>Recap</title>
+</head>
+<body>
+    <div class="progressbar">
+        <div class="step step1">1</div>
+        <div class="step step2">2</div>
+        <div class="step step3">3</div>
+        <div class="step step4">4</div>
+        <div class="step step5">5</div>
+    </div>
+    <script type="text/javascript">
+        var w = document.querySelector("#width");
+        var h = document.querySelector("#height");
+        function change_content (){
+            w.textContent = window.innerWidth;
+            h.textContent = window.innerHeight;
+        }
+        change_content();
+        window.addEventListener("resize", change_content);
+    </script>
+</body>
+</html>
+
+
+

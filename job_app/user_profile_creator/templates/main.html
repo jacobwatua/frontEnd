@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
+    <title>Complete Profile</title>
+</head>
+<body>
+    <div class="navbar">
+        <h6><span id="logo1">Talanta</span> <span id="logo2">Hub</span></h6>
+    </div>
+
+    <div class="container">
+        <p class="message">Please Finish Setting Up Your Profile...</p>
+    </div>
+
+    <!--
+        *create a div that holds the user credential forms 
+        * used to complete the user's profile 
+    -->
+    <div class="container">
+        <div class="complete-user-profile" id="user-profile">
+
+
+
+            
+            
+            
+            <!--Personal information section-->
+            <div class="step">
+                <div class="step-icon step1"><p>1</p></div>
+            </div>
+            <div class="data" id="data-1">
+                <img src="../images/arrow_less.png" title = "expand less" alt="expand" class="less-arrow" id="less-arrow-1">
+                <p class="data-head"><img src="../images/arrow_drop_down_FILL0_wght400_GRAD0_opsz48.svg" title = "expand" alt="expand" onclick="adjust_form_size('1')"> Personal Information</p>
+                <div class="container">
+                    <!--Below is a form that collects user personal information-->
+                    <form name = "personal-details-form"  class="form" action = "" id="personal-information-form">
+                        <div>
+                            <label for="title">Choose Title : </label>
+                            <select name="title" id="title" class="form-control form-control-sm form-select">
+                                <script type="text/javascript">
+                                    print_select_options(titles);
+                                </script>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="user_first_name">First name: </label>
+                            <input type="text" class="form-control form-control-sm" name="user_first_name" id="user_first_name">
+                        </div>
+            
+                        <div>
+                            <label for="user_middle_name">Middle name: </label>
+                            <input type="text" class="form-control form-control-sm" name="user_middle_name" id="user_middle_name">
+                        </div>
+            
+                        <div>
+                            <label for="user_last_name">Last name: </label>
+                            <input type="text" class="form-control form-control-sm" name="user_last_name" id="user_last_name">
+                        </div>
+            
+                        <div>
+                            <label for="Phone number">Phone number: </label>
+                            <input type="text" class="form-control form-control-sm" name="phone" id="phone-number">
+                        </div>
+            
+                        <div>
+                            <label for="dob">Date of Birth: </label>
+                            <input type="date" name="dob" id="dob" class="form-control form-control-sm">
+                        </div>
+            
+                        <div>
+                            <label for="current-address">Current Address: </label>
+                            <input type="text" name="current-address" class="form-control form-control-sm" id="current-address">
+                        </div>
+            
+                        <div>
+                            <label for="parmanent-address">Permanent Address: </label>
+                            <input type="text" name="parmanent-address" class="form-control form-control-sm" id="permanent-address">
+                        </div>
+                        
+                        <div class="personal-info-btn">
+                            <button class="btn btn-outline-dark">submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            <!--End of personal information section-->
+            
+            
+
+
+            <!--Educational background-->
+            <div class="step">
+                <div class="step-icon"><p>2</p></div>
+            </div>
+            <div class="data" id="data-2">
+                <img src="../images/arrow_less.png" title = "expand less" alt="expand" class="less-arrow" id="less-arrow-2">
+                <p class="data-head"><img src="../images/arrow_drop_down_FILL0_wght400_GRAD0_opsz48.svg" title = "expand" alt="expand" onclick="adjust_form_size('2')"> Education</p>
+                <form name = "education-details-form"  class="form" action = "" id="education-information-form">
+                    <div>
+                        <label for="title">Education level</label>
+                        <select name="title" id="title" class="form-control form-control-sm form-select">
+                            <script type="text/javascript">
+                                print_select_options(education_levels);
+                            </script>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="institution">Institution name :</label>
+                        <input type="text" class="form-control form-control-sm" name="institution" id="institution">
+                    </div>
+            
+                    <div>
+                        <label for="start-year">From </label>
+                        <input type="date" class="form-control form-control-sm" name="start-year" id="date-from">
+                    </div>
+            
+                    <div>
+                        <label for="stop-year">To: </label>
+                        <input type="date" class="form-control form-control-sm" name="stop-year" id="date-to">
+                    </div>
+            
+                    <div>
+                        <label for="field">Field of study</label>
+                        <select name="title" id="title" class="form-control form-control-sm form-select">
+                            <script type="text/javascript">
+                                print_select_options(employableFieldsOfStudy);
+                            </script>
+                        </select>
+                    </div>
+            
+                    <div>
+                        <label for="sp">Specialization Field</label>
+                        <input type="text" class="form-control form-control-sm" name="field-sp" id="study-field-specialization">
+                    </div>
+            
+                    <div class="additional-info">
+                        <textarea name="additional_info" id="additional_info" class="form-control text-area" placeholder="Additional information (Optional)"></textarea>
+                    </div>
+                    <div class="education-btn">
+                        <button class="btn btn-outline-dark">Submit</button>
+                        <button class="btn btn-success">Submit & add new</button>
+                    </div>
+                </form>
+            </div>
+            
+            
+            
+            <!--End of educational background information-->
+            
+            
+            
+
+            <!--Work Experience inforamtion-->
+            
+            
+            <div class="step">
+                <div class="step-icon"><p>3</p></div>
+            </div>
+            <div class="data" id="data-3">
+                <img src="../images/arrow_less.png" title = "expand less" alt="expand" class="less-arrow" id="less-arrow-3">
+                <p class="data-head"><img src="../images/arrow_drop_down_FILL0_wght400_GRAD0_opsz48.svg" title = "expand" alt="expand" onclick="adjust_form_size('3')"> Work Experience</p>
+                <form name = "work-details-form"  class="form" action = "" id="work-information-form">
+                    <div>
+                        <label for="employer">Company name:</label>
+                        <input type="text" class="form-control form-control-sm" name="employer" id="employer">
+                    </div>
+            
+                    <div>
+                        <label for="department">Department</label>
+                        <select name="department" id="department" class="form-control form-control-sm form-select">
+                            <script type="text/javascript">
+                                print_select_options(jobDepartments);
+                            </script>
+                        </select>
+                    </div>
+            
+                    <div>
+                        <label for="company-location">Company postal address</label>
+                        <input type="text" class="form-control form-control-sm" name="company-location" id="company-location">
+                    </div>
+            
+                    <div>
+                        <label for="company-email">Company email:</label>
+                        <input type="text" class="form-control form-control-sm" name="company-email" id="company-email">
+                    </div>
+            
+                    <div>
+                        <label for="start-year">From </label>
+                        <input type="date" class="form-control form-control-sm" name="start-year" id="date-from">
+                    </div>
+            
+                    <div>
+                        <label for="stop-year">To: </label>
+                        <input type="date" class="form-control form-control-sm" name="stop-year" id="date-to">
+                    </div>
+            
+                    <div class="additional-info">
+                        <textarea name="additional_info" id="additional_info" class="form-control text-area" placeholder="Additional information (Optional)"></textarea>
+                    </div>
+                    <div class="education-btn">
+                        <button class="btn btn-outline-dark">Submit</button>
+                        <button class="btn btn-success">Submit & add new</button>
+                    </div>
+                </form>
+            </div>
+            
+            
+            
+            
+            <!--End of work experience information-->
+            
+            
+            <!--This section contains user uploads-->
+            
+            <div class="step">
+                <div class="step-icon"><p>4</p></div>
+            </div>
+            <div class="data" id="data-4">
+                <img src="../images/arrow_less.png" title = "expand less" alt="expand" class="less-arrow" id="less-arrow-4">
+                <p class="data-head"><img src="../images/arrow_drop_down_FILL0_wght400_GRAD0_opsz48.svg" title = "expand" alt="expand" onclick="adjust_form_size('4')"> Uploads and Attachments (<span class="text-success">Please upload your resume, academic papers and all necessary files</span>)</p>
+                <div class="container upload-form">
+                    <form action="" role="form">
+                        <div class="text">
+                            <p class="text-center form-text">Upload FIles</p>
+                            <p class="text-center form-text" style="font-size: smaller;">Maximum file size : 10mbs</p>
+                        </div>
+                        <div class="container file-form">
+                            <input type="file" name="Attachments" id="atchmnts" class="form-control form-control-sm">
+                        </div>
+                        <div class="file-btn">
+                            <button class="btn btn-outline-dark">Upload files</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            
+            <!--End of user upload statement-->
+            
+
+
+
+            
+            <!--Information confiramtion stage-->
+            <div class="step">
+                <div class="step-icon step5"><p>5</p></div>
+            </div>
+            <div class="data" id="data-5">
+                <img src="../images/arrow_less.png" title = "expand less" alt="expand" class="less-arrow" id="less-arrow-5">
+                <p class="data-head"><img src="../images/arrow_drop_down_FILL0_wght400_GRAD0_opsz48.svg" title = "expand" alt="expand" onclick="adjust_form_size('5')"> Thats It!</p>
+
+                <div id="info">
+                    <p class="text-success">Personal information</p>
+                    <ul class="list list-unstyled">
+                        <li>First name : </li>
+                        <li>Last name : </li>
+                        <li>Phone: </li>
+                        <li>Email</li>
+                        <li>Address</li>
+                    </ul>
+                </div> 
+                
+                <div class="Education">
+                    <p class="text-success">Educational Background</p>
+                    <ul class="list list-unstyled">
+                        <li>Institution : </li>
+                        <li>From : </li>
+                        <li>To : </li>
+                        <li>Year: </li>
+                        <li>Field: </li>
+                    </ul>
+                </div>
+                
+                
+                <div class="Work Experience">
+                    <p class="text-success">Work Experience</p>
+                    <ul class="list list-unstyled">
+                        <li>Company / employer : </li>
+                        <li>From : </li>
+                        <li>To : </li>
+                        <li>Role: </li>
+                        <li>Description: </li>
+                    </ul>
+                </div>
+                <div class="Uploads and Attachments">
+                    <p class="text-success">File Uploads</p>
+                    <ul class="list list-unstyled">
+                        <li>File 1 : </li>
+                        <li>File 2 : </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--Last stage-->
+        </div>
+    </div>
+    <button class="btn next-btn btn-danger">Next</button>
+</body>
+</html>
