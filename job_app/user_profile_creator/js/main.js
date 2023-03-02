@@ -18,7 +18,7 @@ function adjust_form_size (form_id){
             break;
         case "3" :
             {
-                output_style = "repeat(2, 70px) 70vh repeat(2, 70px)";
+                output_style = "repeat(2, 70px) auto repeat(2, 70px)";
                 steps[2].style.alignItems = "flex-start";
                 window.scrollTo(0, 40);
             }
